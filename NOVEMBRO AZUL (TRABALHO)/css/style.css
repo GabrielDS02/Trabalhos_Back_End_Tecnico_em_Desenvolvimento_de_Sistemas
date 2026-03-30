@@ -1,0 +1,205 @@
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ---------- CONTAINER PRINCIPAL ---------- */
+.container {
+    background: #ffffffee;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* ---------- TÍTULO ---------- */
+h1 {
+    color: #1565c0;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* ---------- FORM ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch; /* alinha todos os inputs na mesma largura */
+    width: 100%;
+}
+
+        /* Garante que todos os inputs fiquem alinhados e centralizados */
+form div 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+label 
+{
+    text-align: left;
+    color: #1565c0;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Ajuste dos inputs */
+input 
+{
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #90caf9;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+input:focus 
+{
+    border-color: #1565c0;
+    box-shadow: 0 0 8px rgba(21, 101, 192, 0.3);
+}
+
+input:hover
+{
+    border-color: #1500ff;
+    background-color: #90caf9;
+    transition: 0.5s;
+}
+
+/* ---------- BOTÃO ---------- */
+button {
+    background: #1565c0;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0d47a1;
+    transform: scale(1.05);
+}
+
+/* Ajuste dos inputs */
+
+
+/* ---------- ANIMAÇÕES ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- ELEMENTOS DECORATIVOS ---------- */
+.bubble {
+    position: absolute;
+    background: rgba(21, 101, 192, 0.15);
+    border-radius: 50%;
+    animation: float 8s infinite ease-in-out;
+    z-index: 0;
+}
+
+.bubble:nth-child(1) { width: 100px; height: 100px; top: 10%; left: 15%; animation-delay: 0s; }
+.bubble:nth-child(2) { width: 150px; height: 150px; bottom: 15%; right: 20%; animation-delay: 2s; }
+.bubble:nth-child(3) { width: 80px; height: 80px; top: 60%; left: 5%; animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); opacity: 0.8; }
+    50% { transform: translateY(-20px) rotate(20deg); opacity: 1; }
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+    margin-top: 25px;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+input#cpf.valid 
+{ border-color: #2e7d32; 
+    box-shadow: 0 0 6px rgba(46,125,50,0.15); 
+}
+input#cpf.invalid 
+{ border-color: #c62828; 
+    box-shadow: 0 0 6px rgba(198,40,40,0.12); 
+}
+
+/* ---------- LOGIN (nova parte) ---------- */
+.login {
+    animation: fadeInLogin 0.8s ease forwards;
+}
+
+.login h2 {
+    color: #1565c0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.login p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* Transição suave entre telas (cadastro → login) */
+.cadastro, .login {
+    transition: all 0.6s ease;
+}
+
+.cadastro.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+.login.show {
+    display: flex !important;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação de entrada */
+@keyframes fadeInLogin 
+{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário – Sala de Enfermagem</title>
+
+    <link rel="stylesheet" href="formulario.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="titulo">Coleta de Perguntas • Sala de Enfermagem</h1>
+    <p class="sub">Preencha perguntas e respostas reais utilizadas no setor.</p>
+
+    <form action="dados.php" method="POST" id="form">
+
+        <!-- BLOCO DE PERGUNTAS -->
+        <div class="bloco">
+
+            <h2>Perguntas e Respostas</h2>
+
+            <!-- 5 perguntas e respostas -->
+            <div class="campo">
+                <label>Pergunta 1</label>
+                <input type="text" name="pergunta1" required>
+                <label>Resposta 1</label>
+                <input type="text" name="resposta1" required>
+            </div>
+
+            <div class="campo">
+                <label>Pergunta 2</label>
+                <input type="text" name="pergunta2" required>
+                <label>Resposta 2</label>
+                <input type="text" name="resposta2" required>
+            </div>
+
+            <div class="campo">
+                <label>Pergunta 3</label>
+                <input type="text" name="pergunta3" required>
+                <label>Resposta 3</label>
+                <input type="text" name="resposta3" required>
+            </div>
+
+            <div class="campo">
+                <label>Pergunta 4</label>
+                <input type="text" name="pergunta4" required>
+                <label>Resposta 4</label>
+                <input type="text" name="resposta4" required>
+            </div>
+
+            <div class="campo">
+                <label>Pergunta 5</label>
+                <input type="text" name="pergunta5" required>
+                <label>Resposta 5</label>
+                <input type="text" name="resposta5" required>
+            </div>
+
+        </div>
+
+        <!-- SUGESTÕES -->
+        <div class="bloco">
+            <h2>Sugestões de Design</h2>
+            <p class="sub2">Descreva como você imagina o visual do nosso site. Exemplos:</p>
+            <ul class="exemplos">
+                <li>• Cores de fundo, botões, temas</li>
+                <li>• Imagem da IA, avatar, mascote</li>
+                <li>• Formatos das mensagens</li>
+                <li>• Animações, transições, estilo de layout</li>
+            </ul>
+
+            <textarea name="sugestoes" placeholder="Digite suas sugestões aqui..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Enviar Dados</button>
+    </form>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Integrantes do Projeto</h3>
+            <p>Gabriel da Silva Machado</p>
+            <p>Alexandre Oliveira Souza</p>
+            <p>João Paulo Ferreira</p>
+        </div>
+    </footer>
+</div>
+
+
+
+<script src="formulario.js"></script>
+
+</body>
+</html>

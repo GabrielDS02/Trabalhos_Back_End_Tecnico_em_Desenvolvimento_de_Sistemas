@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo Inteligente - Fórmula 1</title>
+
+    <link rel="stylesheet" href="SEMAFORO.CSS">
+
+    <script src="SEMAFORO.JS"></script>
+    
+</head>
+    <body>
+        <h1>Pit Wall – Controle de Semáforo</h1>
+
+        <div class="container">
+            <p>Digite o número de carros na pista:</p>
+
+            <input type="number" id="vehicleCount" min="0" placeholder="Carros detectados">
+
+            <button onclick="calcularSemaforo()">Calcular</button>
+
+            <div id="result" class="result"></div>
+        </div>
+    </body>
+</html>

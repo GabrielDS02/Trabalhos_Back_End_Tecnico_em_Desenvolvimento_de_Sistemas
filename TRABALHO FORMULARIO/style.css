@@ -1,0 +1,274 @@
+/* ============================
+   🎨 ELETRO SOLUÇÕES - FORMULÁRIO PROFISSIONAL (RESPONSIVO)
+   ============================ */
+
+/* ----- Variáveis de cor ----- */
+:root {
+  --accent: #10b981;
+  --accent-dark: #059669;
+  --bg-dark: rgba(0, 0, 0, 0.8);
+  --text-light: #f9fafb;
+  --muted: #9ca3af;
+  --error: #ef4444;
+}
+
+/* ----- Reset / Base ----- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: var(--text-light);
+  background: #0f172a;
+  overflow-x: hidden;
+}
+
+/* ----- Vídeo de fundo ----- */
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+  z-index: -1;
+}
+
+/* ----- Container do formulário ----- */
+.form-container {
+  max-width: 440px;
+  margin: 5% auto;
+  padding: 42px 36px;
+  background: var(--bg-dark);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+}
+
+/* ----- Título e subtítulo ----- */
+.form-container h1 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+/* ----- Formulário ----- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#data
+{
+    color: #ffffff;
+}
+
+
+
+input[type="date"] 
+{
+  
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 14px;
+  color: var(--text-light);
+  font-size: 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* torna o ícone do calendário branco (para Chrome, Edge, etc.) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* inverte as cores → ícone branco */
+  cursor: pointer;
+}
+
+/* opcional: remove a cor azul do ícone quando passa o mouse */
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  filter: invert(1) brightness(1.2);
+}
+
+
+
+input::placeholder {
+  color: #ccc;
+}
+
+textarea {
+  resize: none;
+}
+
+/* ----- Botão de envio ----- */
+button {
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* ----- Rodapé ----- */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ============================
+   🧩 RESPONSIVIDADE
+   ============================ */
+
+/* Telas grandes (desktops acima de 1440px) */
+@media (min-width: 1440px) {
+  .form-container {
+    max-width: 520px;
+    padding: 50px 45px;
+  }
+
+  .form-container h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Tablets médios (até 1024px) */
+@media (max-width: 1024px) {
+  .form-container {
+    margin: 8% auto;
+    padding: 40px 30px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Tablets pequenos e celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  .form-container {
+    width: 85%;
+    margin-top: 10%;
+  }
+
+  .form-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+/* Celulares (até 480px) */
+@media (max-width: 480px) {
+  .form-container {
+    width: 92%;
+    margin-top: 20%;
+    padding: 32px 22px;
+  }
+
+  .form-container h1 {
+    font-size: 1.4rem;
+  }
+
+  label {
+    font-size: 0.85rem;
+  }
+
+  input, select, textarea {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+/* Celulares muito pequenos (até 360px) */
+@media (max-width: 360px) {
+  .form-container {
+    padding: 26px 18px;
+  }
+
+  .form-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+}
+

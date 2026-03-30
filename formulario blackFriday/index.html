@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Friday - Cadastro de Produtos</title>
+    <link rel="stylesheet" href="blackfriday.css">
+</head>
+<body>
+
+
+<!-- Vídeo de fundo -->
+<video autoplay muted loop id="bg-video">
+    <source src="blackfriday.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos em HTML5.
+</video>
+
+
+<div class="form-container">
+    <h1>🖤 Black Friday - Cadastro de Produtos</h1>
+    <p class="subtitle">Preencha os dados abaixo e participe da nossa campanha promocional!</p>
+        <form action="ProcessaDados.php?Campanha=BlackFriday&Versao=2.0" method="post">
+            <input type="text" name="usuario" placeholder="Digite o seu nome colaborador" required>
+            <input type="text" name="produto" placeholder="Digite o nome do produto" required>
+            <input type="text" name="categoria" placeholder="Categoria" required>
+            <input type="number" name="preco" placeholder="Preço (R$)" required>
+            <input type="number" name="estoque" placeholder="Quantidade em estoque" required>
+
+            <button type="submit">🚀 Enviar Dados</button>
+        </form>
+</div>
+
+<!-- Rodapé -->
+<footer>
+    © 2025 <span>Gabriel e Lucas - Soluções</span> — Black Friday Edition 💥 | Desenvolvido por Gabriel da Silva Machado
+</footer>
+
+<style>
+/* =======================
+   🎨 ESTILO BLACK FRIDAY PROFISSIONAL
+   ======================= */
+
+/* --------- Configuração base da página --------- */
+html, body 
+{
+    height: 100%; /* Faz o body ocupar 100% da altura da tela */
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    font-family: 'Poppins', Arial, sans-serif; /* Define uma fonte moderna e limpa */
+    background-size: cover; /* Faz a imagem cobrir toda a tela sem distorcer */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-attachment: fixed; /* Faz o fundo ficar fixo ao rolar a página */
+}
+
+/* ====== 🎥 VÍDEO DE FUNDO ====== */
+#bg-video {
+    position: fixed;        /* Fixa o vídeo atrás de tudo */
+    right: 0;               /* Encosta na lateral direita */
+    bottom: 0;              /* Encosta na parte inferior */
+    min-width: 100%;        /* O vídeo cobre 100% da largura */
+    min-height: 100%;       /* O vídeo cobre 100% da altura */
+    object-fit: cover;      /* Garante que o vídeo preencha sem distorcer */
+    z-index: -1;            /* Joga o vídeo para trás de todo o conteúdo */
+    filter: brightness(0.2); /* Escurece o vídeo para destacar o formulário */
+}
+
+/* --------- Container principal do formulário --------- */
+.form-container
+{
+    max-width: 400px; /* Largura máxima do formulário */
+    margin: 7% auto; /* Centraliza horizontalmente e cria espaçamento no topo */
+    padding: 40px 30px; /* Espaçamento interno (vertical e horizontal) */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com transparência */
+    border-radius: 15px; /* Arredonda os cantos do container */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra para dar profundidade */
+    text-align: center; /* Centraliza o texto dentro do container */
+    color: #fff; /* Define a cor do texto como branco */
+    backdrop-filter: blur(4px); /* Adiciona um leve desfoque no fundo do container */
+    transition: all 0.4s ease; /* Transição suave para a animação */
+}
+
+/* usa a transition da div, e muda para um formulario que se levanta ao passar o moude da um efeito de flip */
+.form-container:hover
+{
+    transform: translateY(-10px); /* Move o formulário 10px para cima */
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.4); /* Cria uma sombra vermelha suave */
+}
+
+/* Centraliza o formulário e seus campos */
+form 
+{
+    display: flex;                /* Usa flexbox */
+    flex-direction: column;       /* Coloca os elementos um abaixo do outro */
+    align-items: center;          /* Centraliza horizontalmente os inputs */
+    justify-content: center;      /* Centraliza verticalmente dentro do container */
+}
+
+/* --------- Título principal (Black Friday) --------- */
+h1
+{
+    font-size: 1.6em; /* Tamanho da fonte do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    color: #ff0000; /* Cor vermelha (tema Black Friday) */
+    letter-spacing: 1px; /* Aumenta o espaçamento entre as letras */
+}
+
+/* --------- Subtítulo explicativo --------- */
+.subtitle 
+{
+    font-size: 0.9em; /* Tamanho menor que o título */
+    color: #ddd; /* Cinza claro para contraste suave */
+    margin-bottom: 25px; /* Espaço abaixo do subtítulo */
+}
+
+/* --------- Campos de entrada do formulário --------- */
+form input
+{
+    width: 90%;                   /* Faz os inputs ficarem um pouco menores */
+    max-width: 350px;             /* Limita a largura máxima */
+    padding: 12px 15px; /* Espaçamento interno para aumentar área clicável */
+    margin-bottom: 15px; /* Espaçamento entre os campos */
+    border: none; /* Remove a borda padrão do input */
+    border-radius: 8px; /* Arredonda as bordas dos campos */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco translúcido */
+    color: #fff; /* Texto dos campos em branco */
+    font-size: 0.95em; /* Define um tamanho de fonte confortável */
+    transition: all 0.3s ease; /* Cria uma transição suave ao focar */
+    align-items: center;
+}
+
+/* --------- Efeito visual ao clicar ou focar no campo --------- */
+form input:focus 
+{
+    outline: none; /* Remove o contorno azul padrão do navegador */
+    background-color: rgba(255, 255, 255, 0.25); /* Deixa o fundo mais claro no foco */
+    box-shadow: 0 0 8px #ff0000; /* Adiciona um brilho vermelho ao redor do campo */
+}
+
+/* --------- Botão de envio --------- */
+button 
+{
+    width: 100%; /* Faz o botão ocupar toda a largura do formulário */
+    padding: 14px; /* Tamanho interno confortável */
+    font-size: 1.1em; /* Fonte maior para dar destaque */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #fff; /* Texto branco */
+    background: linear-gradient(90deg, #ff0000, #b80000); /* Gradiente de vermelho */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Mostra o ícone de mão ao passar o mouse */
+    transition: 0.3s; /* Transição suave para efeitos hover */
+    text-transform: uppercase; /* Deixa o texto do botão em maiúsculas */
+}
+
+/* --------- Efeito ao passar o mouse sobre o botão --------- */
+button:hover 
+{
+    background: linear-gradient(90deg, #b80000, #ff0000); /* Inverte o gradiente */
+    box-shadow: 0 0 15px #ff0000; /* Cria um brilho vermelho ao redor do botão */
+}
+
+/* === RODAPÉ BLACK FRIDAY === */
+footer 
+{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.85);
+    border-top: 2px solid #ff0000;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+footer span 
+{
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* --------- Responsividade para telas pequenas (celulares) --------- */
+@media (max-width: 480px) 
+{
+    .form-container {
+        width: 90%; /* Reduz a largura para caber bem em celulares */
+        margin-top: 20%; /* Adiciona mais espaço no topo */
+        padding: 30px 20px; /* Ajusta o espaçamento interno */
+    }
+}
+</style>
+</body>
+</html>

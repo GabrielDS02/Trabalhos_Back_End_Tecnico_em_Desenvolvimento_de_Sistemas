@@ -1,0 +1,226 @@
+/* ============================
+🎨 ELETRO SOLUÇÕES - RESULTADO RESPONSIVO
+============================ */
+
+/* Base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #000000, #111111, #059669);
+  background-size: 400% 400%;
+  animation: fundo 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animação do fundo */
+@keyframes fundo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Caixa principal */
+.resultado {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  max-width: 450px;
+  width: 90%;
+  text-align: left;
+  border: 1px solid #059669;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.resultado:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
+}
+
+/* Título */
+.resultado h1 {
+  text-align: center;
+  color: #059669;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Texto */
+.resultado p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.resultado strong {
+  color: #059669;
+}
+
+/* Botão voltar */
+.voltar {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(90deg, #059669, #059669);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+
+.voltar:hover {
+  background: linear-gradient(90deg, #059669, #059669);
+  box-shadow: 0 0 15px #059669;
+  transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.85);
+  border-top: 2px solid #059669;
+  padding: 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+footer span {
+  color: #059669;
+  font-weight: bold;
+}
+
+/* ============================
+📱 RESPONSIVIDADE
+============================ */
+
+/* 🖥️ Telas grandes (acima de 1440px) */
+@media (min-width: 1440px) {
+  .resultado {
+    max-width: 600px;
+    padding: 50px 45px;
+  }
+
+  .resultado h1 {
+    font-size: 2.2em;
+  }
+
+  .resultado p {
+    font-size: 1.1em;
+  }
+
+  footer {
+    font-size: 15px;
+  }
+}
+
+/* 💻 Tablets e notebooks médios (até 1024px) */
+@media (max-width: 1024px) {
+  .resultado {
+    max-width: 500px;
+    padding: 35px 28px;
+  }
+
+  .resultado h1 {
+    font-size: 1.7em;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
+
+/* 📱 Tablets pequenos e celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  html, body {
+    flex-direction: column;
+    padding-bottom: 70px; /* espaço para o footer */
+  }
+
+  .resultado {
+    width: 85%;
+    padding: 30px 25px;
+  }
+
+  .resultado h1 {
+    font-size: 1.5em;
+  }
+
+  .resultado p {
+    font-size: 0.95em;
+  }
+
+  .voltar {
+    font-size: 0.95em;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+}
+
+/* 📲 Celulares padrão (até 480px) */
+@media (max-width: 480px) {
+  .resultado {
+    padding: 25px 20px;
+    width: 90%;
+  }
+
+  .resultado h1 {
+    font-size: 1.3em;
+  }
+
+  .resultado p {
+    font-size: 0.9em;
+  }
+
+  .voltar {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 11px;
+  }
+}
+
+/* 📱 Celulares muito pequenos (até 360px) */
+@media (max-width: 360px) {
+  .resultado {
+    padding: 20px 16px;
+  }
+
+  .resultado h1 {
+    font-size: 1.1em;
+  }
+
+  .resultado p {
+    font-size: 0.85em;
+  }
+
+  .voltar {
+    font-size: 0.85em;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegando Dados</title>
+</head>
+<body>
+    <form action="ProcessaDados.php" method="post">
+
+    <strong>🌹 Formulario do Ginecologista 👌</strong></br>
+    <br>
+    <input type="text" name="usuario" required placeholder="Digite seu usuario" ></input>
+    <input type="password" name="senha" required placeholder="Digite sua senha" ></input>
+    <br></br>
+    <label>Já realizou o teste do ginecologista este ano ?</label>
+    <br></br>
+    <input type="radio" name="ginecologista" value="Sim" required> Sim </input>
+    <input type="radio" name="ginecologista" value="Não"> Não </input>
+    <br></br>
+    <button type="submit"> Enviar </button>
+
+    </form>
+<style>
+    html, body 
+    {
+        height: 100%;              /* garante que o body ocupe toda a tela */
+        margin: 0;
+        padding: 0;
+    }
+    body 
+    {
+        font-family: Arial, sans-serif; /* fonte do texto */
+        margin: 0; /* remove margens padrão */
+        padding: 0; /* remove padding padrão */
+        background-image: url("FundoFlor.jpg"); /* chama a imagem pelo nome e backgorud image, adiciona a imagem ao fundo do site */
+        background-size: cover;       /* cobre toda a tela */
+        background-position: center;  /* centraliza a imagem */
+        background-repeat: no-repeat; /* não repete a imagem */
+        background-attachment: fixed; /* fixa a imagem ao rolar */
+    }
+</style>
+</body>
+</html>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0a1a2f, #102b46, #0d1828);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    animation: fadeIn 0.7s ease;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.sub {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+.bloco {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 0 10px rgba(0,150,255,0.4);
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0066ff, #00c3ff);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px #00c3ff;
+}
+
+.exemplos li {
+    margin-left: 20px;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+   FOOTER PROFISSIONAL
+============================ */
+.footer {
+    margin-top: 40px;
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255,255,255,0.15);
+    animation: fadeIn 1s ease;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-content p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin: 4px 0;
+}
+
+/* Hover suave nos nomes */
+.footer-content p:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    color: #58cfff;
+}
+
