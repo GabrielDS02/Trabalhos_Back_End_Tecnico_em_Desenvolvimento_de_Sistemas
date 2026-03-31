@@ -2,11 +2,11 @@
 // =======================================================
 // CONEXÃO COM O BANCO DE DADOS
 // =======================================================
-$servidor = "sql102.infinityfree.com";
-$usuario  = "if0_40052179";
-$senha    = "Familia05456";
-$banco    = "if0_40052179_NOVEMBROAZUL";
-$port     = 3306;
+$servidor = "nome do servidor";
+$usuario  = "usuario do servidor";
+$senha    = "senha do servidor";
+$banco    = "nome do banco de dados utilizado";
+$port     = "porta utilizada";
 
 $conn = new mysqli($servidor, $usuario, $senha, $banco, $port);
 
